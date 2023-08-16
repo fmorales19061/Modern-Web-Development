@@ -1,27 +1,20 @@
-const [archs, setarchs] = useState([]);
-    useEffect(() => {
-        getAllarchs().then((archs) => {
-            setarchs(archs);
-    
-        });
-    }, []);
-    const getAllarchs = async () => {
-        const gpu = Parse.Object.extend('GPU');
-        const query = new Parse.Query(gpu);
-        // You can also query by using a parameter of an object
-        // query.equalTo('objectId', 'xKue915KBG');
-        try {
-            const results = await query.find();
-            for (const object of results) {
-            // Access the Parse Object attributes using the .GET method
-            const Name = object.get('Name')
-            console.log(Name);
-            }
-            return results;
-        } catch (error) {
-            console.error('Error while fetching gpu', error);
-        }
-        }
-        
-        export default getAllarchs;
-        
+import React from 'react';
+import './styles.css';
+
+const Navigation = () => {
+    return (
+        <div className="epic-background">
+            <div className="font h1">
+                {/* Header indicating what the page is about */}
+                <ul className="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="register/register.html">Register</a></li>
+                    <li><a href="contact/contact.html">Contact Us</a></li>
+                    {/* Unordered List to serve as a menu */}
+                </ul>
+            </div>
+        </div>
+    );
+}
+
+export default Navigation;

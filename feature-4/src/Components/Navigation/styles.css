@@ -1,0 +1,44 @@
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  margin: 0;
+}
+.navigation li:last-of-type a {
+  border-bottom: none;
+  border-right: none;
+}
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  text-align: center;
+  border-right: 1px solid green;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+.navigation a:hover {
+  background: rgb(20, 20, 20);
+}
+@media all and (max-width: 600px) {
+  .navigation {
+      flex-flow: column wrap;
+      padding: 0;
+  }
+  .navigation a {
+      border-right: none;
+      border-bottom: 1px solid green;
+      max-width: 15rem;
+      margin: 0 auto;
+  }
+}
+
+.font h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+}
+.epic-background {
+  background-color: black;
+  padding: 20px; /* Add padding to create some space around the content */
+  color: white; /* Set the text color to white for better visibility */
+}
